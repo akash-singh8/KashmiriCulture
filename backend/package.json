@@ -1,0 +1,19 @@
+{
+  "name": "KashmiriCulture API",
+  "version": "1.0.0",
+  "description": "An API containing server and database code for KashmiriCulture",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akash-singh8/KashmiriCulture.git"
+  },
+  "author": "Akash Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akash-singh8/KashmiriCulture/issues"
+  },
+  "homepage": "https://github.com/akash-singh8/KashmiriCulture#readme"
+}
