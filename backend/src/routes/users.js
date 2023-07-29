@@ -19,11 +19,31 @@ userRouter.post("/signup", async (req, res) => {
       password: password,
     });
     await newUser.save();
-    
+
     const token = jwt.sign({ id: newUser._id }, process.env.SECRET_KEY, {
       expiresIn: "1h",
     });
     res.json({ message: "User registered successfully", authToken: token });
+  }
+});
+
+
+userRouter.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await Users.findOne({ email: email });
+
+  if (user) {
+    if (user.password === password) {
+      const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY, {
+        expiresIn: "1h",
+      });
+      res.json({ message: "User registered successfully", authToken: token });
+    } else {
+      res.status(403).json({ message: "Invalid password" });
+    }
+  } else {
+    res.status(403).json({ message: "Invalid credentials" });
   }
 });
 
