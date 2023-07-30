@@ -10,3 +10,29 @@ body{
   background-color: rgb(242, 242, 242);
   font-family: 'Genos', sans-serif;
 }
+
+.App{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  background-color: #59C1AC;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: 'Genos', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 6px 20px;
+}
+
+button:hover{
+  opacity: 0.8;
+}
+
+button:active{
+  opacity: 0.7;
+}

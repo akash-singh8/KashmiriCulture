@@ -1,0 +1,38 @@
+
+nav{
+  align-items: center;
+  background-color: white;
+  border: 2px solid #ECECEC;
+  border-radius: 28px;
+  justify-content: space-between;
+  display: flex;
+  user-select: none;
+  width: 100%;
+  max-width: 1480px;
+  margin: 20px 30px;
+  padding: 18px 40px;
+}
+
+nav h1{
+  cursor: pointer;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.nav_menu{
+  align-items: center;
+  column-gap: 38px;
+  display: flex;
+}
+
+.nav_options{
+  column-gap: 28px;
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.nav_option:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
