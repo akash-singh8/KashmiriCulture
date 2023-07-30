@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const ContentSchema = new mongoose.Schema({
   imageLink: { type: String, required: true },
-  descriptions: { type: [String], required: true },
+  description: { type: String, required: true },
 });
 
 const CommentSchema = new mongoose.Schema({
