@@ -1,6 +1,7 @@
 import "../css/home.css";
 
 import cultureMap from "../assets/cultureMap.png";
+import Culture from "../components/Culture";
 
 const Home = () => {
   return (
@@ -19,9 +20,22 @@ const Home = () => {
         </div>
         <img src={cultureMap} alt="map" />
       </section>
+
       <div className="home_seperator">
         - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       </div>
+
+      <section className="cultures">
+        <h1>CULTURES</h1>
+        <div>
+          <Culture imageLink={"https://m.media-amazon.com/images/I/71WX36N1YBL.jpg"} title={"Culture Title"}/>
+          <Culture imageLink={"https://m.media-amazon.com/images/I/71WX36N1YBL.jpg"} title={"Culture Title"}/>
+          <Culture imageLink={"https://m.media-amazon.com/images/I/71WX36N1YBL.jpg"} title={"Culture Title"}/>
+          <Culture imageLink={"https://m.media-amazon.com/images/I/71WX36N1YBL.jpg"} title={"Culture Title"}/>
+          <Culture imageLink={"https://m.media-amazon.com/images/I/71WX36N1YBL.jpg"} title={"Culture Title"}/>
+          <Culture imageLink={"https://m.media-amazon.com/images/I/71WX36N1YBL.jpg"} title={"Culture Title"}/>
+        </div>
+      </section>
     </main>
   );
 };
