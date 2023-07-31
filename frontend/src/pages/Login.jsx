@@ -3,15 +3,41 @@ import "../css/register.css";
 import { Link } from "react-router-dom";
 
 function Login() {
-  function handleLogin(e) {
+  async function handleLogin(e) {
     e.preventDefault();
 
     const input = e.target;
     const email = input[0];
     const password = input[1];
 
-    console.log("Email :", email.value);
-    console.log("Password :", password.value);
+    const data = {
+      email: email.value,
+      password: password.value,
+    };
+
+    try {
+      const response = await fetch("http://127.0.0.1:5050/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.status === 403) {
+        alert("Invalid credentials");
+        return;
+      }
+
+      const responseData = await response.json();
+
+      localStorage.setItem("authToken", responseData.authToken);
+
+      console.log("Response :", responseData);
+    } catch (err) {
+      console.log("Error while signup");
+      console.log(err);
+    }
 
     email.value = "";
     password.value = "";
