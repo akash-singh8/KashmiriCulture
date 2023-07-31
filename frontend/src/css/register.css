@@ -1,0 +1,52 @@
+.register{
+    align-items: center;
+    background-color: white;
+    border: 2px solid #ececec;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    padding: 40px;
+    width: 400px;
+    margin-top: 28px;
+}
+
+.register > h1{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form input{
+    border: 2px solid #ececec;
+    border-radius: 12px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    padding: 10px 20px;
+    margin: 10px;
+    width: 100%;
+}
+
+.form button{
+    margin-top: 20px;
+}
+
+.switch{
+    font-size: 18px;
+    margin-top: 28px;
+}
+
+.switch span{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.switch span:hover{
+    text-decoration: underline;
+}
