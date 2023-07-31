@@ -3,7 +3,7 @@ import "../css/register.css";
 import { Link } from "react-router-dom";
 
 function Signup() {
-  function handleSignup(e) {
+  async function handleSignup(e) {
     e.preventDefault();
 
     const input = e.target;
@@ -17,10 +17,37 @@ function Signup() {
       return;
     }
 
-    console.log("Name :", name.value);
-    console.log("Email :", email.value);
-    console.log("Password :", password.value);
+    const data = {
+      name: name.value,
+      email: email.value,
+      password: password.value,
+    };
 
+    try {
+      const response = await fetch("http://127.0.0.1:5050/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.status === 409) {
+        alert("User already exists");
+        return;
+      }
+
+      const responseData = await response.json();
+
+      localStorage.setItem("authToken", responseData.authToken);
+      
+      console.log("Response :", responseData);
+    } catch (err) {
+      console.log("Error while signup");
+      console.log(err);
+    }
+
+    console.log("Data :", data);
     name.value = "";
     email.value = "";
     password.value = "";
