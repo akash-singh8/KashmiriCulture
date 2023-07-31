@@ -1,0 +1,14 @@
+
+.comment_box{
+    align-items: flex-start;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    column-gap: 10px;
+    display: flex;
+    padding: 10px 14px;
+    margin: 20px 10px;
+}
+
+.comment_box img{
+    width: 58px ;
+}
