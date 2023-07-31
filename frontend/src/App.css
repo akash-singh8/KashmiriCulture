@@ -9,6 +9,7 @@
 body{
   background-color: rgb(242, 242, 242);
   font-family: 'Genos', sans-serif;
+  padding: 0 28px;
 }
 
 .App{
