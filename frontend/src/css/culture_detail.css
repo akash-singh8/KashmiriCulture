@@ -1,0 +1,24 @@
+
+.culture_box{
+    column-gap: 18px;
+    display: flex;
+    width: 100%;
+    margin: 28px 0;
+}
+
+.culture_box img{
+    border-radius: 16px;
+    object-fit: cover;
+    height: 200px;
+    max-width: 340px;
+    width: 30%;
+}
+
+.culture_box strong{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.culture_box p{
+    font-size: 18px;
+}
