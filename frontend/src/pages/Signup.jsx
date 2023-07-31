@@ -1,5 +1,7 @@
 import "../css/register.css";
 
+import { Link } from "react-router-dom";
+
 function Signup() {
   function handleSignup(e) {
     e.preventDefault();
@@ -10,9 +12,9 @@ function Signup() {
     const password = input[2];
     const confirm = input[3];
 
-    if (password.value != confirm.value){
-        alert("Password didnt' match!\nPlease enter same password")
-        return;
+    if (password.value != confirm.value) {
+      alert("Password didnt' match!\nPlease enter same password");
+      return;
     }
 
     console.log("Name :", name.value);
@@ -38,7 +40,10 @@ function Signup() {
 
       <div className="switch">
         <p>
-          Already have an account? <span>Login</span>
+          Already have an account?{" "}
+          <Link to={"/login"} className="link">
+            <span>Login</span>
+          </Link>
         </p>
       </div>
     </section>

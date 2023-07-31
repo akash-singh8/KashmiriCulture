@@ -1,5 +1,7 @@
 import "../css/register.css";
 
+import { Link } from "react-router-dom";
+
 function Login() {
   function handleLogin(e) {
     e.preventDefault();
@@ -19,14 +21,17 @@ function Login() {
     <section className="register">
       <h1>Login</h1>
       <form className="form" onSubmit={handleLogin}>
-        <input type="email" placeholder="Enter your email" required/>
-        <input type="password" placeholder="Enter password" required/>
+        <input type="email" placeholder="Enter your email" required />
+        <input type="password" placeholder="Enter password" required />
         <button>Login</button>
       </form>
 
       <div className="switch">
         <p>
-          {"Don't"} have an account yet? <span>Signup</span>
+          {"Don't"} have an account yet?{" "}
+          <Link to={"/signup"} className="link">
+            <span>Signup</span>
+          </Link>
         </p>
       </div>
     </section>
