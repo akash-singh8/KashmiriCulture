@@ -1,0 +1,80 @@
+
+.culture_view{
+    align-items: center;
+    background-color: white;
+    border: 2px solid #ececec;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    width: 100%;
+    max-width: 1480px;
+    margin: 10px 30px;
+    padding: 40px 60px;
+}
+
+.culture_view > h1{
+    font-size: 34px;
+    margin-bottom: 28px;
+}
+
+.culture_container{
+    column-gap: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.culture_details{
+    flex:3;
+}
+
+.culture_actions{
+    flex: 1;
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+.like{
+    align-items: center;
+    column-gap: 10px;
+    display: flex;
+    font-size: 18px;
+}
+
+.like img{
+    width: 26px;
+}
+
+.like span{
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.like span:hover{
+    text-decoration: underline;
+}
+
+.comment{
+    align-items: flex-end;
+    column-gap: 10px;
+    display: flex;
+    font-size: 18px;
+    margin-top: 28px;
+}
+
+.comment textarea{
+    border: 2px solid #ececec;
+    border-radius: 12px;
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+}
+
+.comment img{
+    cursor: pointer;
+    width: 28px;
+}
+
+.comments{
+    margin-top: 40px;
+}
