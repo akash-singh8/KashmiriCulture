@@ -2,7 +2,7 @@ import "../css/register.css";
 
 import { Link } from "react-router-dom";
 
-function Login() {
+function Login({setLogged}) {
   async function handleLogin(e) {
     e.preventDefault();
 
@@ -31,6 +31,7 @@ function Login() {
 
       const responseData = await response.json();
 
+      setLogged(true);
       localStorage.setItem("authToken", responseData.authToken);
 
       console.log("Response :", responseData);
